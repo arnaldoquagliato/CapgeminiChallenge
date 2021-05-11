@@ -41,20 +41,19 @@ const ParteUm = () => {
 
   const renderItem = (item) => {
     const {peopleVizualizations, valueInvested} = item.item
-    if(item.item.valueInvested)
     return (
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-          <View style={styles.containerResult}>
-            <View style={styles.contentResult}>
-              <MaterialCommunityIcons name="currency-brl" size={24} color="black" />
-              <Text style={styles.valueResult}>{valueInvested}</Text>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss} key={item.index} >
+            <View style={styles.containerResult} >
+              <View style={styles.contentResult}>
+                <MaterialCommunityIcons name="currency-brl" size={24} color="black" />
+                <Text style={styles.valueResult}>{valueInvested}</Text>
+              </View>
+              <View style={styles.contentResult}>
+                <MaterialIcons name="supervisor-account" size={24} color="black" />
+                <Text style={styles.valueResult}>{peopleVizualizations}</Text>
+              </View>
             </View>
-            <View style={styles.contentResult}>
-              <MaterialIcons name="supervisor-account" size={24} color="black" />
-              <Text style={styles.valueResult}>{peopleVizualizations}</Text>
-            </View>
-          </View>
-      </TouchableWithoutFeedback>
+        </TouchableWithoutFeedback>
     )
   }
   return (
@@ -111,7 +110,7 @@ const ParteUm = () => {
       <FlatList 
         data={values}
         renderItem={(data) => renderItem(data)}
-        keyExtractor={data => data.index}
+        keyExtractor={index}
       />
       
     </KeyboardAvoidingView>
