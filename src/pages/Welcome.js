@@ -14,6 +14,10 @@ const Welcome = () => {
     navigation.navigate('ParteUm');
   }
 
+  const handleAnuncio = () => {
+    navigation.navigate('ParteDois');
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.contentTitle}>
@@ -29,7 +33,7 @@ const Welcome = () => {
           </TouchableOpacity>
         </View>
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} >
+          <TouchableOpacity style={styles.button} onPress={handleAnuncio}>
               <Text style={styles.text}>Cadastrar Anúncio</Text>
               <FontAwesome5 name="adversal" size={24} color="black"/>
           </TouchableOpacity>

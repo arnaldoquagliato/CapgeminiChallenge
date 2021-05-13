@@ -110,7 +110,7 @@ const ParteUm = () => {
       <FlatList 
         data={values}
         renderItem={(data) => renderItem(data)}
-        keyExtractor={index}
+        keyExtractor={data => data.index}
       />
       
     </KeyboardAvoidingView>
