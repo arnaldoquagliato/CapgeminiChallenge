@@ -1,5 +1,8 @@
 # CapgeminiChallenge
 
+
+
+## Introdução ##
 Com a intenção de não so trazer o script e tornar essa seleção mais divertida tambem para as pessoas que estão selecionando eu criei um app baseado no 
 que foi requerido a qual eu estarei gerando o APK para android (A qual eu espero que meu corretor tenha android, acabei não gerando para IOS por nao ter 
 como testar no mesmo). 
@@ -14,7 +17,7 @@ Para a parte 2.
 anúncio e ao clicar nele vai mostrar as informações geradas.
 
 
-## Documentação arquitetura ##
+## Documentação Arquitetura ##
 ### 1. Assests: ###
 Local onde fica salvo as fontes utilizadas mas poderia ter as imagens e paleta de cores utilizadas no projeto.
 
@@ -27,3 +30,14 @@ Com o objetivo de separa a lógica para manutenção de estados nesta pasta fica
 em "pages".
 
 ### 4. Pages: ###
+Nessa pasta ficam as telas que irão aparecer.
+
+#### 4.1 Welcome: ####
+Tela inicial, dando acesso ao primeiro e segundo desafio. Ao chegar nessa tela voce pode ir para Calculadora ou Cadastrar Anúncio.
+Calculadora corresponde a Parte 1.
+Cadastrar Anúncio corresponde a Parte 2.
+
+#### 4.2 ParteUm: ####
+A baixo da mensagem "Quanto vamos investir hoje?" deverá ser digitado um valor ao clicar no botão de ckeck ira retornar uma lista 
+
+
