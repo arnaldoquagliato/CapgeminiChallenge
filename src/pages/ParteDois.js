@@ -5,7 +5,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
-import useCalculadora from '../hooks/useCalculadora';
+import useAnuncio from '../hooks/useAnuncio';
 // import { Container } from './styles';
 
 import { useNavigation } from "@react-navigation/core";
@@ -15,7 +15,7 @@ const windowWidth = Dimensions.get('window').width;
 
 const ParteDois = () => {
   const [input, setInput] = useState('')
-  const [values, addValue] = useCalculadora()
+  const [values, addValue] = useAnuncio()
   const [isFocused, setIsFocused] = useState(false)
   const [isFIlled, setIsFilled] = useState(false)
   const [showModal, setShowModal] = useState(false)
@@ -32,42 +32,15 @@ const ParteDois = () => {
   }
 
 
-  const handleClick = value =>{
-    addValue(value);
-    setInput('')
-  }
-
-  const handleOnBlur = () =>{
-    setIsFocused(false)
-    setIsFilled(!!input)
-  }
-
-  const handleOnFocus = () =>{
-    setIsFocused(true)
-  }
-
+  /*aqui vai ser utilizado o presseble*/
   const renderItem = (item) => {
     const {peopleVizualizations, valueInvested} = item.item
     return (
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss} key={item.index} >
-            <View style={styles.containerResult} >
-              <View style={styles.contentResult}>
-                <MaterialCommunityIcons name="currency-brl" size={24} color="black" />
-                <Text style={styles.valueResult}>{valueInvested}</Text>
-              </View>
-              <View style={styles.contentResult}>
-                <MaterialIcons name="supervisor-account" size={24} color="black" />
-                <Text style={styles.valueResult}>{peopleVizualizations}</Text>
-              </View>
-            </View>
-        </TouchableWithoutFeedback>
+        <View/>
     )
   }
   return (
-    <KeyboardAvoidingView 
-      style={styles.container}
-      behavior={Platform.OS === 'ios' ? 'padding' :'height'}
-      >
+    <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.content}>
           <TouchableOpacity onPress={handleBack}>
@@ -76,7 +49,7 @@ const ParteDois = () => {
 
           <View style={styles.investimentContentTitle}>
             <Text style={styles.investimentTitle}>
-              Cadastra Anúncio
+              Cadastrar Anúncio
             </Text>
           </View>
 
@@ -87,22 +60,17 @@ const ParteDois = () => {
         </View>
       </View>
       
-      <ModalForm modalVisible={showModal} handleModal={handleModal}/>
+      <ModalForm modalVisible={showModal} handleModal={handleModal} />
 
-      <View style={styles.results}>
-        
-        <Text  style={styles.columnValue}>Valor Investido</Text>
-        <Text style={styles.columnValue}>Visualizações Esperadas</Text>
-
-      </View>
+      
      
-      <FlatList 
+      {/* <FlatList 
         data={values}
         renderItem={(data) => renderItem(data)}
         keyExtractor={data => data.index}
-      />
+      /> */}
       
-    </KeyboardAvoidingView>
+    </View>
     );
 }
 
@@ -126,10 +94,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
  
-  results:{
+  result:{
     alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
     marginTop: windowHeight/24,
     marginLeft: windowWidth/10
 
