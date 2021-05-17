@@ -6,7 +6,10 @@ https://expo.io/appetize-simulator?url=https://expo.io/@arnaldoquagliato/Capegmi
 
 Ao entrar nesse link ele vai abrir um emulador no navegador, passo a passo:
 1. Clicar em "Tap do Play"
-2. ![image](https://user-images.githubusercontent.com/57818206/118486138-a49b1d00-b6ef-11eb-8b65-5b2333ab2c96.png)
+2. Apos abrir desça ate encontrar o seguinte botão
+ ![image](https://user-images.githubusercontent.com/57818206/118486138-a49b1d00-b6ef-11eb-8b65-5b2333ab2c96.png)
+ 3. Ao clicar ele vai abrir a aplicação e poderá segui os passos disponibilizados em _Introdução_
+ 4. Indico a leitura da documentação da arquitetura antes de utilizar o app.
 
 ## Introdução ##
 Com a intenção de não so trazer o script e tornar essa seleção mais divertida tambem para as pessoas que estão selecionando eu criei um app baseado no 
