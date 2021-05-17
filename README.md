@@ -40,4 +40,11 @@ Cadastrar Anúncio corresponde a Parte 2.
 #### 4.2 ParteUm: ####
 A baixo da mensagem "Quanto vamos investir hoje?" deverá ser digitado um valor ao clicar no botão de ckeck ira retornar uma lista 
 
+#### 4.3 ParteDois: ####
+Ao clicar no botão do cabeçalho "Adicionar +" iria mostrar um formulario ao qual ao ser preenchido iria mostrar os dados requeridos pela parte dois.
+Porém não foi possivel concluir essa parte da atividade.
+
+
+### 5 Utils: ###
+Onde fica a lógica de fato, onde é feito os tratamentos.
 
